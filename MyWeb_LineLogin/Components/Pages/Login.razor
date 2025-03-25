@@ -1,0 +1,16 @@
+@page "/Login"
+
+<h3>เข้าสู่ระบบ</h3>
+
+<form action="/authentication/externallogin" method="post">
+    <AntiforgeryToken></AntiforgeryToken>
+    <input type="text" name="returnUrl" value="@ReturnUrl" hidden/>
+    <button class="btn btn-light mr-2" style="width:100%; color:#FFFFFF; background: #28a745;" type="submit" name="provider" value="Line">Sign in using Line</button>
+</form>
+
+@code {
+
+    [SupplyParameterFromQuery]
+    public string ReturnUrl { get; set; } = "/";
+    
+}
