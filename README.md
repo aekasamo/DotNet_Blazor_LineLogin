@@ -1,4 +1,5 @@
-dotnet new MyWebSite --output blazor
+dotnet new MyWebSite --output aspnetcoreapp
+
 
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 
